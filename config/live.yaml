@@ -1,0 +1,4 @@
+# config/live.yaml — реальный брокер, реальные деньги
+
+log_level: "INFO"
+log_file: "logs/live.log"

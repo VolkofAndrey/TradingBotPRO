@@ -1,0 +1,4 @@
+# config/backtest.yaml — переопределяет только отличия от base.yaml
+
+log_level: "DEBUG"
+log_file: "logs/backtest.log"

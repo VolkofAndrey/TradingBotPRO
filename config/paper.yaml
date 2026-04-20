@@ -1,0 +1,8 @@
+# config/paper.yaml — sandbox Tinkoff, реальный поток данных, виртуальные ордера
+
+log_level: "INFO"
+log_file: "logs/paper.log"
+
+# Уменьшаем риск для тестирования
+risk_per_trade: 0.005        # 0.5% вместо 1%
+max_contracts: 1
