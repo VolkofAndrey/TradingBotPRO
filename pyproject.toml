@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "trading-bot"
+version = "1.0.0"
+description = "Liquidity Sweep trading bot — T-Инвестиции"
+requires-python = ">=3.11"
+
+dependencies = [
+    # T-Инвестиции SDK (новый формат импортов t_tech.invest)
+    "tinkoff-investments>=0.2.0b56",
+
+    # Данные и конфиги
+    "pydantic>=2.6",
+    "pydantic-settings>=2.2",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+
+    # Логирование
+    "structlog>=24.1",
+
+    # Async
+    "grpcio>=1.62",
+    "grpcio-tools>=1.62",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "pytest-cov>=5.0",
+    "ruff>=0.4",
+    "mypy>=1.9",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = false
+ignore_missing_imports = true

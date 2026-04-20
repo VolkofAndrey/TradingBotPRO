@@ -1,0 +1,33 @@
+# Секреты — НИКОГДА не коммитить
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Тесты и покрытие
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Данные (могут быть большими)
+data/*.csv
+data/*.parquet
+
+# Логи
+logs/
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# macOS
+.DS_Store
